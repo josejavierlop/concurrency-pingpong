@@ -16,7 +16,7 @@ public class PingPong {
 		ping = false;
 		System.out.print("ping-");
 
-		condition.signal();
+		condition.signalAll();
 		}finally{
 			lock.unlock();
 		}
@@ -30,7 +30,7 @@ public class PingPong {
 		ping = true;
 		System.out.print("pong-");
 
-		condition.signal();
+		condition.signalAll();
 		}finally{
 			lock.unlock();
 		}
